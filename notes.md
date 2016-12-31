@@ -1,4 +1,4 @@
 # Heroku
 
-Heroku logs
+### Heroku logs
 heroku logs --tail
