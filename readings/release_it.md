@@ -21,3 +21,6 @@
 
 ### Take care of idle connections
 * Connections can become idle during low / no RPM.  low RPM can result in only few connections in pool being used, rest remain idle. these idle connections can cause issues later, with requests sent over these connections taking longer / timing out. these connections need to be detected and discarded.
+
+### Avoid blocking threads
+* Synchronized methods involving IO could potentially cause threads to block if the remote call blocks. This could cause the app to become unresponsive
