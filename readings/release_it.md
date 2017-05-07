@@ -24,3 +24,6 @@
 
 ### Avoid blocking threads
 * Synchronized methods involving IO could potentially cause threads to block if the remote call blocks. This could cause the app to become unresponsive
+
+### Avoid shared resources and adopt shared nothing architecture if possible
+* Shared resources become vulnerability point if the resource becomes the bottleneck.  shared nothing is clean, but lacks failover. If apps maintain some kind of state in shared nothing architecture, and if one of the app goes down, then all state is lost (think cache for some requests getting lost because of one app going down), then some kind of backup / storage strategy is required which leads to some level shared resource.
