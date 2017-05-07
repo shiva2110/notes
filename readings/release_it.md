@@ -30,3 +30,6 @@
 
 ### Load test and identify vulnerabilities
 * Load test with 10x normal traffic and check if the service slows down and then recovers, or fails fast. Crashing service, hung threads, empty responses etc. indicate your system will not survive and would start cascading failure. 
+
+### Your SLA would be lesser than your dependencies's
+* decouple from your dependencies, if your dependencies are slow and if you are tightly coupled, they determine your SLA.
