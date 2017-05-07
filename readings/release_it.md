@@ -18,3 +18,6 @@
 
 ### Run longevity tests
 * Often systems are prone to failure with stress that happen over long period of time. In test environments, we often do not test for longevity, i.e subject the system under stress for longer period of time, ~10 days. This long running tests, can check for memory leaks, or other issues.
+
+### Take care of idle connections
+* Connections can become idle during low / no RPM.  low RPM can result in only few connections in pool being used, rest remain idle. these idle connections can cause issues later, with requests sent over these connections taking longer / timing out. these connections need to be detected and discarded.
