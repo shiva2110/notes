@@ -27,3 +27,6 @@
 
 ### Avoid shared resources and adopt shared nothing architecture if possible
 * Shared resources become vulnerability point if the resource becomes the bottleneck.  shared nothing is clean, but lacks failover. If apps maintain some kind of state in shared nothing architecture, and if one of the app goes down, then all state is lost (think cache for some requests getting lost because of one app going down), then some kind of backup / storage strategy is required which leads to some level shared resource.
+
+### Load test and identify vulnerabilities
+* Load test with 10x normal traffic and check if the service slows down and then recovers, or fails fast. Crashing service, hung threads, empty responses etc. indicate your system will not survive and would start cascading failure. 
