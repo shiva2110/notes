@@ -15,3 +15,6 @@
     }
  }
 ```
+
+### Run longevity tests
+* Often systems are prone to failure with stress that happen over long period of time. In test environments, we often do not test for longevity, i.e subject the system under stress for longer period of time, ~10 days. This long running tests, can check for memory leaks, or other issues.
