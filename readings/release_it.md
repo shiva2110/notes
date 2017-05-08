@@ -33,3 +33,9 @@
 
 ### Your SLA would be lesser than your dependencies's
 * decouple from your dependencies, if your dependencies are slow and if you are tightly coupled, they determine your SLA.
+
+### Timeout pattern
+* Timeouts at integration points prevent threads from being hung and the app from becoming unresponsive with no logs or activity.
+
+### Circuit breaker pattern
+* Circuit breakers along with timeout prevents putting extra pressure on already stressed out external service / DB.
